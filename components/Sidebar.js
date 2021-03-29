@@ -4,7 +4,9 @@ import { Avatar } from "@material-ui/core";
 function Sidebar() {
   return (
     <Container>
-      <Header></Header>
+      <Header>
+        <UserAvatar />
+      </Header>
     </Container>
   );
 }
@@ -15,4 +17,6 @@ const Container = styled.div``;
 
 const Header = styled.div``;
 
-const UserAvatar = styled(Avatar);
+const UserAvatar = styled(Avatar)`
+  margin: 10px;
+`;
