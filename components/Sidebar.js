@@ -1,8 +1,10 @@
+import styled from "styled-components";
+
 function Sidebar() {
   return (
-    <div>
+    <Container>
       <h1>Sidebar</h1>
-    </div>
+    </Container>
   );
 }
 
