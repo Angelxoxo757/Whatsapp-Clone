@@ -24,6 +24,8 @@ function Sidebar() {
       </Search>
 
       <SidebarButton>Start a new chat</SidebarButton>
+
+      {/* LIST OF CHATS */}
     </Container>
   );
 }
@@ -70,6 +72,9 @@ const SearchInput = styled.input`
 
 const SidebarButton = styled(Button)`
   width: 100%;
-  border-top: 1px solid whitesmoke;
-  border-bottom: 1px solid whitesmoke;
+
+  &&& {
+    border-top: 1px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+  }
 `;
