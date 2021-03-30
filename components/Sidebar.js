@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Avatar, IconButton } from "@material-ui/core";
 import ChatIcon from "@material-ui/icons/Chat";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import SearchIcon from "@material-ui/icons/Search";
 
 function Sidebar() {
   return (
@@ -17,6 +18,9 @@ function Sidebar() {
           </IconButton>
         </iconContainer>
       </Header>
+      <Search>
+        <SearchIcon />
+      </Search>
     </Container>
   );
 }
@@ -32,8 +36,20 @@ const Header = styled.div`
   background-color: #ffeeed;
   z-index: 1;
   justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  height: 80px;
+  border-bottom: 1px solid whitesmoke;
 `;
 
-const UserAvatar = styled(Avatar)``;
+const UserAvatar = styled(Avatar)`
+  cursor: pointer;
+
+  ::hover {
+    opacity: 0.8;
+  }
+`;
+
+const Search = styled.div``;
 
 const IconContainer = styled.div``;
