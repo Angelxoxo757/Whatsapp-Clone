@@ -14,7 +14,7 @@ function Sidebar() {
     if (!input) return null;
 
     if (EmailValidator.validate(input)) {
-      // NEED TO ADD CHAT INTO 'chats' COLLECTION
+      // NEED TO ADD CHAT INTO DB 'chats' COLLECTION
     }
   };
 
