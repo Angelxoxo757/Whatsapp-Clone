@@ -3,6 +3,7 @@ import { Avatar, Button, IconButton } from "@material-ui/core";
 import ChatIcon from "@material-ui/icons/Chat";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import SearchIcon from "@material-ui/icons/Search";
+import * as EmailValidator from "email-validator";
 
 function Sidebar() {
   const createChat = () => {
@@ -11,6 +12,10 @@ function Sidebar() {
     );
 
     if (!input) return null;
+
+    if (EmailValidator.validate(input)) {
+      // NEED TO ADD CHAT INTO 'chats' COLLECTION
+    }
   };
 
   return (
