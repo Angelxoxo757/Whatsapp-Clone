@@ -9,14 +9,14 @@ function Sidebar() {
     <Container>
       <Header>
         <UserAvatar />
-        <iconContainer>
+        <IconContainer>
           <IconButton>
             <ChatIcon />
           </IconButton>
           <IconButton>
             <MoreVertIcon />
           </IconButton>
-        </iconContainer>
+        </IconContainer>
       </Header>
       <Search>
         <SearchIcon />
