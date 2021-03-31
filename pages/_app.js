@@ -7,9 +7,8 @@ import Loading from "../components/Loading";
 function MyApp({ Component, pageProps }) {
   const [user, loading] = useAuthState(auth);
 
-  if (!user) return <Login />;
-
   if (loading) return <Loading />;
+  if (!user) return <Login />;
 
   return <Component {...pageProps} />;
 }

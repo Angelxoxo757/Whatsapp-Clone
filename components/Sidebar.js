@@ -51,7 +51,7 @@ const Header = styled.div`
   display: flex;
   position: sticky;
   top: 0;
-  background-color: #e6f2f7;
+  background-color: #62ddb8;
   z-index: 1;
   justify-content: space-between;
   align-items: center;
