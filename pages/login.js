@@ -30,7 +30,9 @@ const LoginContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 100px;
-  background-color: #b76e79;
+  background-color: #ede9f8;
+  border-radius: 5px;
+  box-shadow: 8px 4px 14px -3px rgba(0, 0, 0, 0.7);
 `;
 
 const Logo = styled.img`
