@@ -35,7 +35,7 @@ const LoginContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 100px;
-  background-color: #f36b9b;
+  background-color: #d4a46a;
   border-radius: 5px;
   box-shadow: 8px 4px 14px -3px rgba(0, 0, 0, 0.7);
 `;
