@@ -5,8 +5,15 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 import SearchIcon from "@material-ui/icons/Search";
 import * as EmailValidator from "email-validator";
 import { auth, db } from "../firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useCollection } from "react-firebase-hooks/firestore";
 
 function Sidebar() {
+  const [user] = useAuthState(auth);
+  const userChatRef = db
+    .collection("chats")
+    .where("users", "array-contains", user.email);
+  const [chatsSnapshot] = useCollection(userChatRef);
   const createChat = () => {
     const input = prompt(
       "Please enter an email address for the user you wish to chat with"
@@ -17,10 +24,12 @@ function Sidebar() {
     if (EmailValidator.validate(input)) {
       // NEED TO ADD CHAT INTO DB 'chats' COLLECTION
       db.collection("chats").add({
-        users: [],
+        users: [user.email, input] && input !== user.email,
       });
     }
   };
+
+  const chatAlreadyExists = (recipientEmail) => {};
 
   return (
     <Container>
