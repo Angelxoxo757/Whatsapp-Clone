@@ -4,7 +4,7 @@ import ChatIcon from "@material-ui/icons/Chat";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import SearchIcon from "@material-ui/icons/Search";
 import * as EmailValidator from "email-validator";
-import { auth } from "../firebase";
+import { auth, db } from "../firebase";
 
 function Sidebar() {
   const createChat = () => {
@@ -16,6 +16,9 @@ function Sidebar() {
 
     if (EmailValidator.validate(input)) {
       // NEED TO ADD CHAT INTO DB 'chats' COLLECTION
+      db.collection("chats").add({
+        users: [],
+      });
     }
   };
 
