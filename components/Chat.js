@@ -12,7 +12,18 @@ function Chat({ id, users }) {
 
 export default Chat;
 
-const Container = styled.div``;
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px;
+  word-break: break-word;
+
+  :hover {
+    background-color: #ffd8aa;
+  }
+`;
+
 const UserAvatar = styled(Avatar)`
   margin: 5px;
   margin-right: 15px;
