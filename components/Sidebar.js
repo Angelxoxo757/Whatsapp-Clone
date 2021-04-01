@@ -21,10 +21,14 @@ function Sidebar() {
 
     if (!input) return null;
 
-    if (EmailValidator.validate(input)) {
+    if (
+      EmailValidator.validate(input) &&
+      !chatAlreadyExists &&
+      input !== user.email
+    ) {
       // NEED TO ADD CHAT INTO DB 'chats' COLLECTION
       db.collection("chats").add({
-        users: [user.email, input] && input !== user.email,
+        users: [user.email, input],
       });
     }
   };
